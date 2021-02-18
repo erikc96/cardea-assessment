@@ -9,8 +9,8 @@ import {
   AppBar,
 } from "@material-ui/core";
 import { List } from "../models.tsx/common";
-import { GET_LISTS } from "../features/list/query";
 import { ListCard } from "../components/ListCard";
+import { GET_LISTS } from "../apollo/queries";
 
 export const Lists = () => {
   const { loading, error, data } = useQuery(GET_LISTS, {});

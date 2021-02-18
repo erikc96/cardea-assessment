@@ -10,11 +10,11 @@ import {
   AppBar,
 } from "@material-ui/core";
 import { List, Job } from "../models.tsx/common";
-import { GET_LISTS, GET_LISTS_AND_JOBS } from "../features/list/query";
 import { ListCard } from "../components/ListCard";
 import { JobAccordion } from "../components/JobAccordion";
 import ListSlider from "../components/ListSlider";
 import JobAccordionContainer from "../components/JobAccordionContainer";
+import { GET_LISTS_AND_JOBS } from "../apollo/queries";
 
 export const JobsByLists = () => {
   const { loading, error, data } = useQuery(GET_LISTS_AND_JOBS, {});

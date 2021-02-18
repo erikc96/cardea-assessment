@@ -1,9 +1,9 @@
 import React from "react";
 import { useQuery } from "react-apollo";
-import { GET_JOBS } from "../features/job/query";
 import { useParams } from "react-router-dom";
 import { JobAccordion } from "../components/JobAccordion";
 import { Job } from "../models.tsx/common";
+import { GET_JOBS } from "../apollo/queries";
 
 export const List = () => {
   const { loading, error, data } = useQuery(GET_JOBS, {});
