@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="h-screen bg-gray-100 grid grid-rows- grid-cols-12 gap-2">
+        <div className="min-h-screen bg-gray-100 grid grid-cols-12 gap-2">
           <Switch>
             <Route path="/list/:id">
               <List />

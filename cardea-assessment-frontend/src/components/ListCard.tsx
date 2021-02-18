@@ -63,7 +63,7 @@ export const ListCard = ({
   };
 
   return (
-    <div className={"listCard"}>
+    <div className={"h-full"}>
       <div className="absolute bg-gray-100 rounded listCheckBox">
         <Checkbox checked={checked} className={classes.checkbox} />
       </div>

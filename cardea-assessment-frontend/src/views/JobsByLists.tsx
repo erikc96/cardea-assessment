@@ -42,24 +42,30 @@ export const JobsByLists = () => {
         {loading && <h1>Loading</h1>}
         {error && <h1>Error</h1>}
         {data && (
-          <div className="mt-32 shadow-lg grid grid-flow-row gap-16">
-            <ListSlider>
-              {data.lists.map((list: List, index: number) => {
-                return (
-                  <div
-                    key={index}
-                    className="h-full"
-                    onClick={() => toggleSelected(list.id)}
-                  >
-                    <ListCard
-                      list={list}
-                      checked={selected.includes(list.id)}
-                    />
-                  </div>
-                );
-              })}
-            </ListSlider>
-            <div className={"shadow-xs min-h-32 pb-32 px-8 text-center"}>
+          <div className="mt-16 rounded grid grid-flow-row gap-16 bg-gray">
+            <div className={"shadow-lg bg-white rounded"}>
+              <ListSlider>
+                {data.lists.map((list: List, index: number) => {
+                  return (
+                    <div
+                      key={index}
+                      className="h-full py-2"
+                      onClick={() => toggleSelected(list.id)}
+                    >
+                      <ListCard
+                        list={list}
+                        checked={selected.includes(list.id)}
+                      />
+                    </div>
+                  );
+                })}
+              </ListSlider>
+            </div>
+            <div
+              className={
+                "shadow-lg min-h-32 pb-32 px-8 text-center bg-white rounded"
+              }
+            >
               <h1 className={"my-6 text-4xl"}>
                 Jobs from the lists you've selected 🚀{" "}
               </h1>

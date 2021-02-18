@@ -6,7 +6,7 @@ export const JobAccordionContainer = ({
   children: Array<React.ReactElement>;
 }): React.ReactElement => {
   return (
-    <div className="w-full bg-gray grid grid-flow-row gap-4">
+    <div className="w-full grid grid-flow-row gap-4">
       {children.map((child: React.ReactElement) => {
         return <div>{child}</div>;
       })}
