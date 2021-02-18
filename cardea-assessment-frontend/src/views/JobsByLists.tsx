@@ -44,7 +44,7 @@ export const JobsByLists = () => {
         {data && (
           <div className="mt-32 shadow-lg grid grid-flow-row gap-16">
             <ListSlider>
-              {[...data.lists, ...data.lists].map((list: List, index) => {
+              {data.lists.map((list: List, index: number) => {
                 return (
                   <div
                     key={index}
